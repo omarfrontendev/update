@@ -1,0 +1,15 @@
+@import "../styles/global.style.scss";
+
+.main__layout {
+  .app__main__container {
+    margin-left: 70px;
+    padding: 0px 40px;
+    .app__container {
+      padding: 15px 0px;
+      max-width: 1600px;
+    }
+  }
+  .col_2_5 {
+    width: 20%;
+  }
+}

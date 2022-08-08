@@ -1,0 +1,46 @@
+@import "../../styles/variables.scss";
+
+.input__control {
+  background-color: $pure__white;
+  height: 50px;
+  padding: 0 15px;
+  column-gap: 20px;
+  position: relative;
+
+  .input__icon {
+    flex: 1;
+  }
+  .show__pass__btn,
+  .input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  .input {
+    flex: 1;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    padding-left: 60px;
+    border: 1px solid #E1E1E1;
+    border-radius: 12px;
+
+    &:focus {
+      border: 1px solid #261C6A;
+    }
+
+    &::placeholder {
+      font-size: $ft__14;
+      color: $dark__text__color;
+    }
+  }
+  .show__pass__btn {
+    position: relative;
+    .pass__icon {
+      color: #E2E2E2;
+      font-size: 21px;
+    }
+  }
+}

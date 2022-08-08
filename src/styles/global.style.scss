@@ -1,0 +1,30 @@
+@import "./variables.scss";
+
+body {
+  background-color: $bg__white;
+  font-size: $ft__14;
+  font-weight: $ft__w__medium;
+  font-family: $main__font__family;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}

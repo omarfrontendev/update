@@ -1,0 +1,24 @@
+@import "../../styles/variables.scss";
+
+.user__dropdown {
+  padding: 14px 18px;
+  row-gap: 25px;
+  color: $title__text__color;
+  font-size: $ft__14;
+  font-weight: $ft__w__medium;
+
+  .row {
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    .left__row {
+      column-gap: 10px;
+
+      .red__title {
+        color: #FF4646;
+      }
+    }
+  }
+
+}
