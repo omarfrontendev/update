@@ -10,6 +10,9 @@ import ResturantCard from "../components/ResturantCard";
 import CardsRow from "../components/CardsRow";
 import CustomRadio from "../components/CustomRadio";
 import SignForm from "../components/SignForm";
+import FilterOptions from "../components/FilterOptions";
+import ForgetPassword from "../components/ForgetPassword";
+import ResetPassword from "../components/ResetPassword";
 
 export default function Layout() {
 
@@ -57,6 +60,9 @@ export default function Layout() {
               </div>
             </div> */}
           {/* </CardsRow> */}
+          <ResetPassword />
+          <ForgetPassword />
+          <FilterOptions />
           <SignForm />
         </div>
       </div>

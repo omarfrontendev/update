@@ -76,4 +76,4 @@ export const UserAdressIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24">
   <path id="iconmonstr-location-12" d="M12,0A9.91,9.91,0,0,0,2,9.815C2,15.32,6.375,19.083,12,24c5.625-4.917,10-8.68,10-14.185A9.91,9.91,0,0,0,12,0Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,18Zm4-8v4H13V12H11v2H8V10H7l5-5,5,5ZM15,7l-1-.991V5h1Z" transform="translate(-2)" fill="#bbb"/>
 </svg>
-)
+);

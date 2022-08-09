@@ -26,6 +26,7 @@ export default function SignForm() {
       icon: <PasswordIcon />
     },
   ];
+
   const signUpResources = [
     {
       id: 'user__name',
@@ -63,7 +64,7 @@ export default function SignForm() {
       type: 'password',
       icon: <PasswordIcon />
     },
-  ]
+  ];
 
 
   return (
@@ -101,18 +102,16 @@ export default function SignForm() {
           {loginForm && loginResources.map(input => <Input
             placeholder={input.placeholder}
             id={input.id}
-            icon={input.icon}
             type={input.type}
-            value={input[input?.id]}
+            value={input[input.id]}
             setValue={setData}
             data={data}
           />)}
           {!loginForm && signUpResources.map(input => <Input
             placeholder={input.placeholder}
             id={input.id}
-            icon={input.icon}
             type={input.type}
-            value={input[input?.id]}
+            value={input[input.id]}
             setValue={setData}
             data={data}
           />)}
