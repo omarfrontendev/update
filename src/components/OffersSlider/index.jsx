@@ -25,20 +25,41 @@ const offersArray = [
 
 export default function OffersSlider() {
   return (
-    <div className="mb-5">
-      <div className={styles.offers__slider__wrapper}>
-        <SwiperSlider spv={3.8}>
-          {offersArray.map((offer, index) => (
-            <SwiperSlide key={index}>
-              <OfferCard
-                index={index}
-                description={offer.description}
-                img={offer.img}
-              />
-            </SwiperSlide>
-          ))}
-        </SwiperSlider>
-      </div>
+    <div className={styles.offers__slider__wrapper}>
+      <SwiperSlider
+        paginated={false}
+        centeredSlides={true}
+        loop={true}
+        autoPlay={{ play: true, delay: 5000 }}
+        breakPoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 14,
+          },
+          567: {
+            slidesPerView: 1.5,
+            spaceBetween: 24,
+          },
+          768: {
+            slidesPerView: 1.5,
+            spaceBetween: 36,
+          },
+          1024: {
+            slidesPerView: 1.5,
+            spaceBetween: 42,
+          },
+        }}
+      >
+        {offersArray.map((offer, index) => (
+          <SwiperSlide key={index}>
+            <OfferCard
+              index={index}
+              description={offer.description}
+              img={offer.img}
+            />
+          </SwiperSlide>
+        ))}
+      </SwiperSlider>
     </div>
   );
 }

@@ -1,15 +1,32 @@
-@import "../styles/global.style.scss";
+@import "../styles/variables.scss";
 
 .main__layout {
+  background-color: $bg__white;
+  // background-color: red;
   .app__main__container {
     margin-left: 70px;
-    padding: 0px 40px;
+    // background-color: yellow;
     .app__container {
-      padding: 15px 0px;
-      max-width: 1600px;
+      z-index: 1;
+      // background-color: green;
+      padding-top: 116px;
+      padding-bottom: 70px;
+      margin: auto;
+      max-width: 1920px;
+      // min-height: 100vh;
     }
   }
-  .col_2_5 {
-    width: 20%;
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 768px) {
+  .main__layout {
+    .app__main__container {
+      margin-left: 0px;
+      .app__container {
+        padding-bottom: 0;
+        padding-top: 80px;
+      }
+    }
   }
 }

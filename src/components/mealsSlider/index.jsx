@@ -13,7 +13,34 @@ export default function MealsSlider() {
   ];
   return (
     <div className="meals__slider__wrapper">
-      <SwiperSlider spv={3.8}>
+      <SwiperSlider
+        loop={false}
+        paginated={false}
+        centeredSlides={false}
+        autoPlay={{ play: true, delay: 5000 }}
+        breakPoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 14,
+          },
+          567: {
+            slidesPerView: 1.5,
+            spaceBetween: 21,
+          },
+          992: {
+            slidesPerView: 2.5,
+            spaceBetween: 21,
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 21,
+          },
+          1440: {
+            slidesPerView: 3.75,
+            spaceBetween: 21,
+          },
+        }}
+      >
         {mealsArray.map((item, index) => (
           <SwiperSlide key={index}>
             <MealCard img={item.img} />

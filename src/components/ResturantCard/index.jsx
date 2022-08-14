@@ -5,13 +5,19 @@ import { AiFillStar } from "react-icons/ai";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { RiMotorbikeLine } from "react-icons/ri";
 
-export default function ResturantCard() {
+export default function ResturantCard({ status, saleValue }) {
   const [liked, setLiked] = useState(false);
 
   return (
     <div className={styles.resturant__card__wrapper}>
-      <Link to={"/"}>
-        <div className={styles.resturant__card}>
+      <Link to={"/resturant-details"}>
+        <div className={`${styles.resturant__card} ${styles[status]}`}>
+          {(status === "new" || status === "discounted") && (
+            <span className={styles.tag}>
+              {status === "new" ? "NEW" : saleValue}
+            </span>
+          )}
+          <div className={styles.closed__overlay}></div>
           <div className={styles.resturant__logo__wrapper}>
             <img
               className={styles.resturant__logo}
@@ -19,7 +25,7 @@ export default function ResturantCard() {
               alt={"resturant_logo"}
             />
           </div>
-          <h5 className={styles.resturant__name}>Albaik</h5>
+          <h5 className={styles.resturant__name}>Burger King</h5>
           <span className={styles.resturant__categories}>
             Food • Deserts • Drinks
           </span>

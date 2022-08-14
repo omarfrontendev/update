@@ -1,0 +1,36 @@
+@import "../../styles/variables.scss";
+
+.accordion__item {
+  display: flex;
+  flex-direction: column;
+  background-color: $pure__white;
+  box-shadow: 0px 6px 15px #7779b20f;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 11px 0;
+  .accordion__item__body {
+    // padding: 20px;
+  }
+  .accordion__item__btn {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $main__orange;
+    padding: 0 20px;
+    color: $pure__white;
+    height: 67px;
+    .accordion__item__title {
+      font-size: $ft__20;
+    }
+    .arrow__icon {
+      font-size: $ft__32;
+    }
+  }
+  .accordion__item__btn[aria-expanded="true"] {
+    .arrow__icon {
+      transform: rotate(180deg);
+    }
+  }
+}

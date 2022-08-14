@@ -3,17 +3,20 @@
 .meal__card__wrapper {
   position: relative;
   .meal__card {
+    z-index: 1;
     min-height: 140px;
-    padding: 15px;
+    padding: 15px 13px;
     background-color: $pure__white;
     border: 1px solid #eeeeee;
-    border-radius: 16px;
+    border-radius: 12px;
     display: flex;
+    // align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     .meal__image_wrapper {
       min-width: 110px;
       min-height: 110px;
-      border-radius: 16px;
+      border-radius: 12px;
       display: grid;
       place-items: center;
       overflow: hidden;
@@ -69,9 +72,10 @@
     }
   }
   .meal__like__btn__wrapper {
+    z-index: 2;
     display: block;
     position: absolute;
-    right: 23px;
+    right: 19px;
     top: 22px;
     .meal__like__btn {
       all: unset;

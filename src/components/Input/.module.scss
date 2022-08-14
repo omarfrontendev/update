@@ -24,13 +24,15 @@
     left: 0px;
     width: 100%;
     padding-left: 60px;
-    border: 1px solid #E1E1E1;
+    border: 1px solid #e1e1e1;
     border-radius: 12px;
 
     &:focus {
-      border: 1px solid #261C6A;
+      border: 1px solid #261c6a;
+      &::placeholder {
+        color: #261c6a;
+      }
     }
-
     &::placeholder {
       font-size: $ft__14;
       color: $dark__text__color;
@@ -39,7 +41,7 @@
   .show__pass__btn {
     position: relative;
     .pass__icon {
-      color: #E2E2E2;
+      color: #e2e2e2;
       font-size: 21px;
     }
   }

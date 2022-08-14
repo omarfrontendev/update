@@ -9,7 +9,7 @@ export default function ResSumCard() {
 
   return (
     <div className={styles.res__summary__card__wrapper}>
-      <Link to={"/"}>
+      <Link to={"/resturant-details"}>
         <div className={styles.res__summary__card}>
           <div className={styles.res__img__wrapper}>
             <img
@@ -18,7 +18,7 @@ export default function ResSumCard() {
               alt={"resturant_logo"}
             />
           </div>
-          <h4 className={styles.res__name}>Papa john's</h4>
+          <h6 className={styles.res__name}>Papa john's</h6>
           <div className={styles.res__rate}>
             <AiFillStar className={styles.star__icon} />
             <span className={styles.rate__value}>4.5</span>

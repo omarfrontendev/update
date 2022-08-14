@@ -12,6 +12,10 @@
     border: none;
     outline: none;
 
+    &.small__screen {
+      display: none !important;
+    }
+
     .left__row {
       column-gap: 10px;
 
@@ -22,3 +26,15 @@
   }
 
 }
+
+// =========== Start Media Max-width: 991px (768px - 991px) ================ //
+@media(max-width: 991px) {
+  .user__dropdown {
+    .row {
+      &.small__screen {
+        display: flex !important;
+      }
+    }
+  }
+}
+// =========== End Media Max-width: 991px (768px - 991px) ================ //
