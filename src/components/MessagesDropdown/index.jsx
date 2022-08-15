@@ -3,9 +3,9 @@ import { RiSendPlane2Fill } from "react-icons/ri";
 import DropdownMenu from "../DropdownMenu";
 import styles from "./.module.scss";
 
-function MessagesDropdown({ notMenu, onClose }) {
+function MessagesDropdown({ notMenu, onClose, showHeader }) {
   return (
-    <DropdownMenu margin={"-62px"} notMenu={notMenu} onClose={onClose} >
+    <DropdownMenu showHeader={showHeader} margin={"-62px"} notMenu={notMenu} onClose={onClose} >
       <div className={styles.messageDropdown}>
         <div className={styles.header__dropdown}>
           <div

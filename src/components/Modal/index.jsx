@@ -7,11 +7,20 @@ export default function Modal({ id, children, maxWidth }) {
       <div className="modal fade" id={id} tabindex="-1" aria-hidden="true">
         <div
           class="modal-dialog modal-dialog-centered"
-          style={{ maxWidth: maxWidth || "924px" }}
+          style={{
+            maxWidth: maxWidth || "924px",
+            background: "transparent",
+            border: "0",
+            boxShadow: "none",
+          }}
         >
           <div
             className="modal-content"
-            style={{ background: "transparent", border: "0" }}
+            style={{
+              background: "transparent",
+              border: "0",
+              boxShadow: "none",
+            }}
           >
             {children}
           </div>

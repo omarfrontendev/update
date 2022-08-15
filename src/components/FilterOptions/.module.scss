@@ -24,9 +24,12 @@
 
   .options__btns {
     column-gap: 15px;
-    margin-bottom: 22px;
+    padding-bottom: 22px;
+    // max-width: 100%;
+    // overflow-x: scroll;
 
     .options__btn {
+      white-space: pre;
       padding: 6px;
       border-radius: 20px;
       background-color: transparent;
@@ -136,5 +139,14 @@
     font-size: $ft__14;
     border-radius: 12px;
     box-shadow: 0px 3px 10px #FE82083D;
+  }
+}
+
+@media(max-width: 575px) {
+  .options__container {
+    .options__btns {
+      max-width: 100%;
+      overflow-x: scroll;
+    }
   }
 }

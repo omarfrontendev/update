@@ -6,7 +6,7 @@ import DropdownMenu from "../DropdownMenu";
 import styles from "./.module.scss";
 import Button from "../Button";
 
-export default function CartDropdown({ notMenu, onClose }) {
+export default function CartDropdown({ notMenu, onClose, showHeader }) {
   const [restaurant, setRestaurant] = useState({});
   const [items, setItems] = useState([]);
   const [paymentDetails, setPaymentDetails] = useState([]);
@@ -77,7 +77,7 @@ export default function CartDropdown({ notMenu, onClose }) {
     .reduce((a, b) => a + b, 0);
 
   return (
-    <DropdownMenu notMenu={notMenu} onClose={onClose}>
+    <DropdownMenu notMenu={notMenu} onClose={onClose} showHeader={showHeader}>
       <div className={styles.cartDropdown}>
         <div className={styles.header__dropdown}>
           <div className={`d-flex align-items-center ${styles.cart__header}`}>

@@ -3,6 +3,7 @@ import styles from "./.module.scss";
 import { MatnLogo } from "../../UI/icons";
 
 export default function Footer() {
+
   return (
     <footer className={`${styles.app__main__footer} ${styles.bottom__fixed}`}>
       <div

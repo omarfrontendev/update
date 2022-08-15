@@ -6,9 +6,14 @@ import { RiMessage2Fill } from "react-icons/ri";
 import DropdownMenu from "../DropdownMenu";
 import styles from "./.module.scss";
 
-export default function UserDropdown({ setShowCart, setShowMessages, setShowNotifications }) {
+export default function UserDropdown({
+  setShowCart,
+  setShowMessages,
+  setShowNotifications,
+  showHeader
+}) {
   return (
-    <DropdownMenu alignedEnd={true}>
+    <DropdownMenu alignedEnd={true} showHeader={showHeader}>
       <div className={`d-flex flex-column ${styles.user__dropdown}`}>
         <button
           className={`d-flex justify-content-between align-items-center ${styles.row}`}
@@ -30,30 +35,30 @@ export default function UserDropdown({ setShowCart, setShowMessages, setShowNoti
         </button>
         <button
           className={`d-flex justify-content-between align-items-center ${styles.small__screen} ${styles.row}`}
-          onClick={() => setShowCart(prev => !prev)}
+          onClick={() => setShowCart((prev) => !prev)}
         >
           <div className={`d-flex align-items-center   ${styles.left__row}`}>
-            <FaShoppingCart />
+            <FaShoppingCart className={styles.icon} />
             <p className={styles.title}>Cart</p>
           </div>
           <IoIosArrowForward />
         </button>
         <button
-          onClick={() => setShowMessages(prev => !prev)}
+          onClick={() => setShowMessages((prev) => !prev)}
           className={`d-flex justify-content-between align-items-center ${styles.small__screen} ${styles.row}`}
         >
           <div className={`d-flex align-items-center  ${styles.left__row}`}>
-            <RiMessage2Fill />
+            <RiMessage2Fill className={styles.icon} />
             <p className={styles.title}>Messages</p>
           </div>
           <IoIosArrowForward />
         </button>
         <button
-          onClick={() => setShowNotifications(prev => !prev)}
+          onClick={() => setShowNotifications((prev) => !prev)}
           className={`d-flex justify-content-between align-items-center ${styles.small__screen} ${styles.row}`}
         >
           <div className={`d-flex align-items-center  ${styles.left__row}`}>
-            <IoMdNotifications />
+            <IoMdNotifications className={styles.icon} />
             <p className={styles.title}>Notifications</p>
           </div>
           <IoIosArrowForward />

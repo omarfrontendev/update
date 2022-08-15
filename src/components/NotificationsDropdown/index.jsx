@@ -3,7 +3,7 @@ import { BiDotsHorizontalRounded } from "react-icons/bi";
 import DropdownMenu from "../DropdownMenu";
 import styles from "./.module.scss";
 
-function NotificationsDropdown({ notMenu, onClose }) {
+function NotificationsDropdown({ notMenu, onClose, showHeader }) {
   const [active, setActive] = useState("all");
 
   const [notifications, setNotifications] = useState([]);
@@ -79,6 +79,7 @@ function NotificationsDropdown({ notMenu, onClose }) {
     <DropdownMenu
     notMenu={notMenu}
     onClose={onClose}
+    showHeader={showHeader}
     >
       <div className={styles.notification__Dropdown}>
         <div className={styles.header__dropdown}>

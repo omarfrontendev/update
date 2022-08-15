@@ -4,7 +4,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  column-gap: 40px;
   margin-bottom: 40px;
+  white-space: pre;
+  max-width: 100%;
+
   .page__header__title {
     font-size: $ft__18;
     color: $darkblue__text__color;
@@ -42,5 +46,11 @@
         }
       }
     }
+  }
+}
+
+@media(max-width: 991px) {
+  .page__header {
+    overflow-x: scroll;
   }
 }

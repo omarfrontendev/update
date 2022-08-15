@@ -13,9 +13,6 @@ import ResturantDetailsPage from "../../pages/ResturantDetailsPage";
 import ResturantInfoPage from "../../pages/ResturantInfoPage";
 import OrderDetailsPage from "../../pages/OrderDetailsPage";
 
-// POP UP MODALS
-import MemberAreaForms from "../MemberAreaForms";
-
 // Components
 import Layout from "../../layout";
 
@@ -41,8 +38,6 @@ export default function App() {
         <Route path="/resturant-info" element={<ResturantInfoPage />} />
         <Route path="/order-details" element={<OrderDetailsPage />} />
       </Routes>
-      {/* POP UP MODALS */}
-      <MemberAreaForms />
     </Layout>
   );
 }
